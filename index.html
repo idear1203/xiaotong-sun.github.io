@@ -65,7 +65,7 @@
 		</nav>
 
 		<nav>
-			总字数 <span class="post-count">4</span>
+			总字数 <span class="post-count">679</span>
 		</nav>
 		<nav>
 			<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=250 height=52 src="//music.163.com/outchain/player?type=2&id=543681750&auto=1&height=32"></iframe>
@@ -150,31 +150,84 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-how-to-build-a-blog" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-使用Hexo+Github搭建个人网站（Ubuntu19.10）" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2020/01/15/how-to-build-a-blog/">how to build a blog</a>
+      <a class="article-title" href="/2020/01/15/%E4%BD%BF%E7%94%A8Hexo+Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%AB%99%EF%BC%88Ubuntu19.10%EF%BC%89/">使用Hexo+Github搭建个人网站（Ubuntu19.10）</a>
     </h1>
   
 
         
-        <a href="/2020/01/15/how-to-build-a-blog/" class="archive-article-date">
-  	<time datetime="2020-01-15T03:29:19.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-01-15</time>
+        <a href="/2020/01/15/%E4%BD%BF%E7%94%A8Hexo+Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%AB%99%EF%BC%88Ubuntu19.10%EF%BC%89/" class="archive-article-date">
+  	<time datetime="2020-01-15T07:31:32.755Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-01-15</time>
 </a>
         
       </header>
       <div align="center" class="post-count">
-        字数：4字 | 预计阅读时长：1分钟
+        字数：679字 | 预计阅读时长：2分钟
     </div>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>#什么是hexo</p>
+        <h2 id="使用Hexo-Github搭建个人网站（Ubuntu19-10）"><a href="#使用Hexo-Github搭建个人网站（Ubuntu19-10）" class="headerlink" title="使用Hexo+Github搭建个人网站（Ubuntu19.10）"></a>使用Hexo+Github搭建个人网站（Ubuntu19.10）</h2><h5 id="工具：node-js-npm-Hexo-Github"><a href="#工具：node-js-npm-Hexo-Github" class="headerlink" title="工具：node.js, npm, Hexo, Github"></a>工具：node.js, npm, Hexo, Github</h5><h5 id="前提：-git工具，-github账号，-基本的git操作"><a href="#前提：-git工具，-github账号，-基本的git操作" class="headerlink" title="前提： git工具， github账号， 基本的git操作"></a>前提： git工具， github账号， 基本的git操作</h5><hr>
+<h4 id="一：什么是Hexo"><a href="#一：什么是Hexo" class="headerlink" title="一：什么是Hexo"></a>一：什么是Hexo</h4><p><strong>Hexo</strong>是一个快速、简洁且高效的博客框架。 <strong>Hexo</strong>使用Markdown解析文章，在几秒内，即可利用靓丽的主题生成静态网页。</p>
+<ul>
+<li><strong>nodejs官方网站：<a href="https://hexo.io/" target="_blank" rel="noopener">https://hexo.io/</a></strong></li>
+<li><strong><em>Hexo的安装和使用，必须有node.js环境</em></strong></li>
+</ul>
+<h4 id="二：准备工作"><a href="#二：准备工作" class="headerlink" title="二：准备工作"></a>二：准备工作</h4><ol>
+<li><strong>什么是node.js？</strong><br>node.js是能够在服务器端运行JavaScript的开放源代码、跨平台JavaScript运行环境</li>
+<li><strong>安装nodejs和npm</strong><br>对于ubuntu这样的Linux系统来说，安装nodejs和npm比较简单，可以通过终端命令完成<pre><code>$sudo apt install nodejs
+$sudo apt install npm</code></pre>通过以下命令检查安装的nodejs和npm版本<pre><code>$node -v
+$npm -v</code></pre>nodejs官网已推送至12.14.1版本，npm为6.13.4版本，若所安装的版本过低并且像笔者一样不会通过源码包安装的童鞋可以参考下面网站所示方法：<a href="http://github.com/nodesource/distributions/blob/master/README.md" target="_blank" rel="noopener">http://github.com/nodesource/distributions/blob/master/README.md</a></li>
+</ol>
+<h4 id="三：安装Hexo框架"><a href="#三：安装Hexo框架" class="headerlink" title="三：安装Hexo框架"></a>三：安装Hexo框架</h4><ul>
+<li><p>打开终端，依次输入：</p>
+<pre><code>$npm install hexo-cil -g                  #安装hexo-cli命令
 
+$hexo init &lt;file&gt;                                 #初始化博客文件
+
+$cd &lt;file&gt;                                              #跳转到博客文件夹
+
+$npm install                                       #还原各种包的关联
+
+$hexo server                                      #进行预览</code></pre><p>参考网址：<a href="https://hexo.io/" target="_blank" rel="noopener">https://hexo.io/</a></p>
+<p>以上步骤完成后，博客网址完成基本搭建。</p>
+</li>
+</ul>
+<h4 id="四：关联github"><a href="#四：关联github" class="headerlink" title="四：关联github"></a>四：关联github</h4><ol>
+<li><p><strong>在github上新建一个仓库。</strong></p>
+<p>仓库命名要严格按照以下格式：</p>
+<pre><code>&lt;github用户名&gt;.github.io</code></pre></li>
+</ol>
+<p>![](2020-01-15 16-37-10 的屏幕截图.png)</p>
+<ul>
+<li><p><strong>用README初始化也是必须的。</strong></p>
+</li>
+<li><p><strong><em>由于我已经创建好库，所以会显示重复命名</em></strong></p>
+</li>
+</ul>
+<p><strong>2.获得ssh密匙</strong><br>  在本地通过终端输入：</p>
+<pre><code>$ssh -keygen</code></pre><p>一路enter下去，就会在当前用户名下生成一个<strong>.ssh文件夹</strong><br>打开.ssh文件夹中的<strong>id_rsa.pub文件并复制所有内容</strong></p>
+<p><strong>3.在github上填入公匙，即所复制的内容</strong></p>
+<p> ![](2020-01-15 16-58-06 的屏幕截图.png)<br>  ![](2020-01-15 16-58-27 的屏幕截图.png)</p>
+<p>![](2020-01-15 16-58-50 的屏幕截图.png)</p>
+<p>4.<strong>判断ssh是否添加成功</strong><br>终端输入</p>
+<pre><code>$ssh -T git@github.com</code></pre><p>如果出现你的用户名，那么表示ssh添加成功</p>
+<p>5.<strong>配置文件，将博客与github关联</strong><br>打开博客根目录下的_config.yml文件，这是博客的配置文件，可在此修改与博客相关的各种信息</p>
+<ul>
+<li>打开后修改最后一行的配置<pre><code>  deploy:
+type: git
+repo: git@github.com:xiaotong-sun/xiaotong-sun.github.io.git        # 根据自己的仓库地址填写
+branch: master</code></pre></li>
+</ul>
+<h4 id="五：最后一步"><a href="#五：最后一步" class="headerlink" title="五：最后一步"></a>五：最后一步</h4><p> 终端执行：</p>
+<pre><code>$hexo clean
+$hexo g -d   </code></pre><h2 id="到此博客网站正式搭建成功"><a href="#到此博客网站正式搭建成功" class="headerlink" title="到此博客网站正式搭建成功##"></a>到此博客网站正式搭建成功##</h2>
       
 
       
@@ -186,7 +239,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2020/01/15/how-to-build-a-blog/">展开全文 >></a>
+          <a class="article-more-a" href="/2020/01/15/%E4%BD%BF%E7%94%A8Hexo+Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%AB%99%EF%BC%88Ubuntu19.10%EF%BC%89/">展开全文 >></a>
         </p>
       
 
